@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaykus</title>
+    <script src="scripts/vue.js"></script>
+    <script src="scripts/vue2-filters.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+</head>
+<body>
+
+<div id="app">
+
+    <div>
+        <nav class="navbar navbar-expand-lg py-2">
+           <img src="img/Glaykus.png" class="d-inline-block align-top px-4 py-4" alt="Glaykus" >
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir/Cerrar Menú de Navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <router-link to="/componentes/inicio.js" exact class="nav-link" name="inicio" >Inicio</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/componentes/recetas.js" exact class="nav-link" name="recetas" >Blog de Recetas</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/componentes/misRecetas.js" exact class="nav-link" name="misRecetas" >Mis recetas</router-link>
+                    </li>
+                   
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+   <div>
+    <transition name="slide-fade" mode="out-in">
+        <router-view></router-view>
+    </transition>
+   </div>
+
+    <footer class="footer">
+        <p>Copyright &copy; GLAYKUS 2021</p>
+    </footer>   
+ 
+</div>
+
+<!-- <script src="scripts/app.js"></script> -->
+    <script src="scripts/router/vue-router.js"></script>
+    <script src="componentes/inicio.js"></script>
+    <script src="componentes/recetas.js"></script>
+    <script src="componentes/misRecetas.js"></script>
+    <script src="scripts/router/rutas.js"></script>
+    
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> 
+</body>
+</html>
